@@ -1,0 +1,20 @@
+{
+  "staging": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-lumo-staging-5c266-authRole",
+      "UnauthRoleArn": "arn:aws:iam::977099014892:role/amplify-lumo-staging-5c266-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::977099014892:role/amplify-lumo-staging-5c266-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-lumo-staging-5c266-deployment",
+      "UnauthRoleName": "amplify-lumo-staging-5c266-unauthRole",
+      "StackName": "amplify-lumo-staging-5c266",
+      "StackId": "arn:aws:cloudformation:us-east-1:977099014892:stack/amplify-lumo-staging-5c266/eadfd830-e1ea-11ef-8dc7-0e9b767e4af5",
+      "AmplifyAppId": "dv1bqgn5fbp6d"
+    },
+    "categories": {
+      "auth": {
+        "Lumo": {}
+      }
+    }
+  }
+}

@@ -1,9 +1,12 @@
 import { Tabs } from 'expo-router';
 import React from 'react';
-
+import { Amplify } from 'aws-amplify';
+import awsConfig from '../../src/aws-exports';
 import { TabBarIcon } from '@/components/navigation/TabBarIcon';
 import { Colors } from '@/constants/Colors';
 import { useColorScheme } from '@/hooks/useColorScheme';
+
+Amplify.configure(awsConfig)
 
 export default function TabLayout() {
   const colorScheme = useColorScheme();

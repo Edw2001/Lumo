@@ -28,7 +28,7 @@ const emotionData: Record<Emotion, EmotionDetails> = {
   },
   sad: {
     emoji: '😔',
-    message: "I'm sorry to hear that you're feeling sad. I'm here for you.",
+    message: "Yes, I didn't do well on my midterms, and I'm feeling down. The course pressure is going to be high.",
     stressLevel: 70,
   },
   nervous: {
@@ -58,8 +58,8 @@ export default function ChatScreen() {
         createdAt: new Date(),
         user: {
           _id: 2,
-          name: 'ChatBot',
-          avatar: require('../../assets/images/react-logo.png'),
+          name: 'Edward',
+          avatar: require('../../assets/images/Edward.jpg'),
         },
       };
       setMessages((previousMessages) =>
@@ -72,30 +72,31 @@ export default function ChatScreen() {
 
   useEffect(() => {
     setMessages([
-      // Initial messages are commented out. You can uncomment and use them if needed.
+      //Initial messages are commented out. You can uncomment and use them if needed.
+      {
+        _id: uuidv4(),
+        text: "Hi Edward! It seems you're a bit stressed today and not feeling well. Did something happen?", 
+        createdAt: new Date(Date.now()),
+        user: {
+          _id: 1,
+          name: 'Issac',
+          avatar: require('../../assets/images/Issac.jpg'),
+        },
+      },
       // {
       //   _id: uuidv4(),
       //   text: "Yes, I didn't do well on my midterms, and I'm feeling down. The course pressure is going to be high.",
-      //   createdAt: new Date(Date.now()),
-      //   user: {
-      //     _id: 1,
-      //     name: 'Edward',
-      //   },
-      // },
-      // {
-      //   _id: uuidv4(),
-      //   text: "Hi Edward! It seems you're a bit stressed today and not feeling well. Did something happen?",
       //   createdAt: new Date(),
       //   user: {
       //     _id: 2,
-      //     name: 'ChatBot',
-      //     avatar: require('../../assets/images/react-logo.png'),
+      //     name: 'Edward',
+      //     avatar: require('../../assets/images/Edward.jpg'),
       //   },
       // },
     ]);
 
     // Emotions extracted from ML Model.
-    const emotionFromMLModel: Emotion = 'happy';
+    const emotionFromMLModel: Emotion = 'sad';
     updateEmotion(emotionFromMLModel);
   }, []);
 
@@ -113,13 +114,13 @@ export default function ChatScreen() {
   const user = {
     _id: 1,
     name: 'Edward',
-    avatar: require('../../assets/images/react-logo.png'),
+    avatar: require('../../assets/images/Edward.jpg'),
   };
 
   const otherUser = {
     _id: 2,
-    name: 'ChatBot',
-    avatar: require('../../assets/images/react-logo.png'),
+    name: 'Edward',
+    avatar: require('../../assets/images/Edward.jpg'),
   };
 
   return (
